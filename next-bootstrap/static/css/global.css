@@ -1,0 +1,3 @@
+* > *::after{
+  content: 'This will disrupt the page if it loads...'
+}
