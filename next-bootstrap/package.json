@@ -1,5 +1,5 @@
 {
-  "name": "bitzprice",
+  "name": "next-bootstrap",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,6 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "isomorphic-unfetch": "^2.0.0",
-    "mdbreact": "^4.14.0",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",

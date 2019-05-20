@@ -20,10 +20,8 @@ const Layout = (props) => (
         crossOrigin="anonymous"
       />
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"></link>
-      <link
-        rel="stylesheet"
-        href="static/assets/global.css"
-      />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet"></link>
+      {/* <link rel="stylesheet" href="static/assets/global.css"></link> */}
     </Head>
     
     <NavigationBar />

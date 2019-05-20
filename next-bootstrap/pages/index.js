@@ -1,11 +1,12 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import React, { Component } from 'react';
 // import IndexNav from '../components/IndexNav';
-// import NavigationBar from '../components/NavigationBar';
+import NavigationBar from '../components/NavigationBar';
 
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 import AboutSection from '../components/AboutSection';
+import ExperianceCounter from '../components/ExperianceCounter';
 import ServicesSection from '../components/ServicesSection';
 import BlogSection from '../components/BlogSection';
 
@@ -26,10 +27,11 @@ export default class index extends Component {
 
 <React.Fragment>
   <Layout >
-    {/* <NavigationBar /> */}
-    {/* <IndexNav /> */}
+    <NavigationBar />
+
     <HomeHero />
     <AboutSection />
+    <ExperianceCounter />
     <ServicesSection />
     <BlogSection />
   </Layout>

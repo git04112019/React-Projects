@@ -24,7 +24,9 @@ export default class BlogSection extends Component {
             <div className="col-md-4">
               <div className="card card-blog">
                 <div className="card-img">
-                  <a href="https://medium.com/@HansOnConsult/fix-wordpress-plugin-500-error-s-use-ftp-ssh-to-deactivate-a-plugins-c9764bc4af37"><img src="assets/img/error.png" alt className="img-fluid" /></a>
+                  <a href="https://medium.com/@HansOnConsult/fix-wordpress-plugin-500-error-s-use-ftp-ssh-to-deactivate-a-plugins-c9764bc4af37">
+                    <img src="/static/img/error.png"  className="img-fluid" />
+                  </a>
                 </div>
                 <div className="card-body">
                   <div className="card-category-box">
@@ -42,7 +44,7 @@ export default class BlogSection extends Component {
                 <div className="card-footer">
                   <div className="post-author">
                     <a href="#">
-                      <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" />
+                      {/* <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" /> */}
                     </a><a href="https://medium.com/@HansOnConsult/" className="author">Hans McMurdy
                     </a>
                   </div>
@@ -52,7 +54,7 @@ export default class BlogSection extends Component {
             <div className="col-md-4">
               <div className="card card-blog">
                 <div className="card-img">
-                  <a href="https://medium.com/@HansOnConsult/poor-mans-guide-to-web-development-ee47a31b6b75"><img src="assets/img/code-header.jpeg" alt className="img-fluid" /></a>
+                  <a href="https://medium.com/@HansOnConsult/poor-mans-guide-to-web-development-ee47a31b6b75"><img src="/static/img/code-header.jpeg"  className="img-fluid" /></a>
                 </div>
                 <div className="card-body">
                   <div className="card-category-box">
@@ -68,7 +70,7 @@ export default class BlogSection extends Component {
                 <div className="card-footer">
                   <div className="post-author">
                     <a href="#">
-                      <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" />
+                      {/* <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" /> */}
                     </a><a href="https://medium.com/@HansOnConsult" className="author">Hans McMurdy
                     </a>
                   </div>
@@ -78,7 +80,7 @@ export default class BlogSection extends Component {
             <div className="col-md-4">
               <div className="card card-blog">
                 <div className="card-img">
-                  <a href="https://medium.com/@HansOnConsult"><img src="assets/img/bg-code-2.jpeg" alt className="img-fluid" /></a>
+                  <a href="https://medium.com/@HansOnConsult"><img src="/static/img/bg-code-2.jpeg"  className="img-fluid" /></a>
                 </div>
                 <div className="card-body">
                   <div className="card-category-box">
@@ -94,7 +96,7 @@ export default class BlogSection extends Component {
                 <div className="card-footer">
                   <div className="post-author">
                     <a href="#">
-                      <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" />
+                      {/* <img src="img/testimonial-2.jpg" alt className="avatar rounded-circle" /> */}
                     </a><a href="https://medium.com/@HansOnConsult" className="author">Hans McMurdy
                     </a>
                   </div>

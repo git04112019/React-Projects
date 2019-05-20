@@ -15,7 +15,7 @@ export default class AboutSection extends Component {
                     <div className="row">
                       <div className="col-sm-6 col-md-5">
                         <div className="about-img">
-                          <img src="assets/img/hansmcmurdy.png" className="img-fluid rounded b-shadow-a" style={{height: '9em'}} alt />
+                          <img src="/static/img/hansmcmurdy.png" className="img-fluid rounded b-shadow-a" style={{height: '9em'}} />
                         </div>
                       </div>
                       <div className="col-sm-6 col-md-7">
@@ -89,58 +89,6 @@ export default class AboutSection extends Component {
         </div>
       </section>
 
-      <div className="section-counter paralax-mf bg-image" style={{backgroundImage: 'url(img/counters-bg.jpg)'}}>
-        <div className="overlay-mf" />
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-3 col-lg-3">
-              <div className="counter-box counter-box pt-4 pt-md-0">
-                <div className="counter-ico">
-                  <span className="ico-circle"><i className="ion-checkmark-round" /></span>
-                </div>
-                <div className="counter-num">
-                  <p className="counter">5</p>
-                  <span className="counter-text">YEARS OF EXPERIENCE</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-3 col-lg-3">
-              <div className="counter-box pt-4 pt-md-0">
-                <div className="counter-ico">
-                  <span className="ico-circle"><i className="ion-ios-calendar-outline" /></span>
-                </div>
-                <div className="counter-num">
-                  <p className="counter">50</p>
-                  <span className="counter-text">PROJECTS</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-3 col-lg-3">
-              <div className="counter-box pt-4 pt-md-0">
-                <div className="counter-ico">
-                  <span className="ico-circle"><i className="ion-ios-people" /></span>
-                </div>
-                <div className="counter-num">
-                  <p className="counter">20</p>
-                  <span className="counter-text">TOTAL CLIENTS</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-3 col-lg-3">
-              <div className="counter-box pt-4 pt-md-0">
-                <div className="counter-ico">
-                  <span className="ico-circle"><i className="ion-ribbon-a" /></span>
-                </div>
-                <div className="counter-num">
-                  <p className="counter">4</p>
-                  <span className="counter-text">AWARD WON</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
 
   </React.Fragment>
   <style jsx>{`
@@ -172,52 +120,6 @@ export default class AboutSection extends Component {
   height: .7rem;
   background-color: #0078ff;
 }
-
-/*======================================
-//--//-->   COUNTER
-======================================*/
-
-.counter-box {
-  color: #fff;
-  text-align: center;
-}
-
-.counter-ico {
-  margin-bottom: 1rem;
-}
-
-.counter-ico .ico-circle {
-  height: 60px;
-  width: 60px;
-  line-height: 1.8;
-  box-shadow: 0 0 0 10px #cde1f8;
-}
-
-.counter-num .counter {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-@media (min-width: 577px) {
-  .counter-box {
-    margin-bottom: 1.8rem;
-  }
-}
-
-.overlay-mf {
-  background-color: #0078ff;
-}
-
-.overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .7;
-}
-
-
   `}</style>
       </div>
     )
