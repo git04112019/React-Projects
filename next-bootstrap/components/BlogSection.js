@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class BlogSection extends Component {
-  render() {
-    return (
-      <div>
+const BlogSection = () => (
+<div>
   <React.Fragment> 
   <section id="blog" className="blog-mf sect-pt4 route">
         <div className="container">
@@ -216,7 +214,7 @@ export default class BlogSection extends Component {
     }
   }
   `}</style>
-      </div>
-    )
-  }
-}
+</div>
+
+)
+export default BlogSection;

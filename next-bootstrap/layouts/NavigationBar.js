@@ -1,24 +1,24 @@
 // import Link from 'next/link';
+import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
-import FancyName from './FancyName';
+import FancyName from '../components/FancyName';
 import { 
   Nav,
-  Navbar,
-  NavDropdown
+  Navbar
 } from 'react-bootstrap';
 
 
-import React, { Component } from 'react'
 
 export default class NavigationBar extends Component {
   render() {
     const BGcolor = "#000";
     const NavScrollColor = "#e40909";
     const NavItemColor = "#fff";
+    const NavToggleColor = "#fff";
 
     
     return (
-<div>
+<React.Fragment>
   <Scrollspy items={ ['', 'about', 'service', 'blog'] } 
     scrolledPastClassName="navbar-reduce"  
     componentTag='div' 
@@ -34,7 +34,13 @@ export default class NavigationBar extends Component {
       <Navbar.Brand href="/"> 
         <FancyName /> 
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" children>
+        <span></span>
+        <span></span>
+        <span></span>
+      </Navbar.Toggle> 
+      </>
       <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav className="">
             <Scrollspy items={ ['', "about"] } scrolledPastClassName="active"  componentTag='li' className=" nav-item">
@@ -52,6 +58,9 @@ export default class NavigationBar extends Component {
   </Scrollspy>
 
       <style global jsx>{`
+      ////
+      // Base Style for Nav
+      ////
        .navbar-b {
         transition: all .5s ease-in-out;
         background-color: transparent;
@@ -158,10 +167,7 @@ export default class NavigationBar extends Component {
       .navbar-b.navbar-reduce .navbar-brand {
         color: ${NavScrollColor};
       }
-      
-      .navbar-b.navbar-reduce .navbar-toggler span {
-        background-color: #1B1B1B;
-      }
+
       
       .navbar-b .navbar-brand {
         color: #fff;
@@ -198,62 +204,69 @@ export default class NavigationBar extends Component {
       }
       
       /*--/ Hamburger Navbar /--*/
-      
-      .navbar-toggler {
-        position: relative;
-      }
-      
-      .navbar-toggler:focus,
-      .navbar-toggler:active {
-        outline: 0;
-      }
-      
-      .navbar-toggler span {
-        display: block;
-        background-color: #fff;
-        height: 3px;
-        width: 25px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        left: 0;
-        opacity: 1;
-      }
-      
-      .navbar-toggler span:nth-child(1),
-      .navbar-toggler span:nth-child(3) {
-        transition: -webkit-transform .35s ease-in-out;
-        transition: transform .35s ease-in-out;
-        transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
-      }
-      
-      .navbar-toggler:not(.collapsed) span:nth-child(1) {
-        position: absolute;
-        left: 12px;
-        top: 10px;
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-        opacity: 0.9;
-      }
-      
-      .navbar-toggler:not(.collapsed) span:nth-child(2) {
-        height: 12px;
-        visibility: hidden;
-        background-color: transparent;
-      }
-      
-      .navbar-toggler:not(.collapsed) span:nth-child(3) {
-        position: absolute;
-        left: 12px;
-        top: 10px;
-        -webkit-transform: rotate(-135deg);
-        transform: rotate(-135deg);
-        opacity: 0.9;
+        .navbar-toggler span,
+        .navbar-b.navbar-reduce .navbar-toggler span
+        {
+          background-color: ${NavToggleColor};
+        }
+        .navbar-toggler {
+          position: relative;
+        }
+        
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+          outline: 0;
+        }
+        
+        .navbar-toggler span {
+          display: block;
+          height: 3px;
+          width: 25px;
+          margin-top: 4px;
+          margin-bottom: 4px;
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          left: 0;
+          opacity: 1;
+          transition: all .35s ease-in-out;
+        }
+        
+        .navbar-toggler span:nth-child(1),
+        .navbar-toggler span:nth-child(3) {
+          // transition: -webkit-transform .35s ease-in-out;
+          transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+          transition: all .35s ease-in-out;
+        }
+        //////// 
+        // When clicked
+        ////////
+        .navbar-toggler.collapsed span:nth-child(1) {
+          position: absolute;
+          left: 12px;
+          top: 10px;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+          opacity: 0.9;
+        }
+        
+        // Remove the middle
+        .navbar-toggler.collapsed span:nth-child(2) {
+          height: 12px;
+          visibility: hidden;
+          background-color: transparent;
+        }
+        
+        .navbar-toggler.collapsed span:nth-child(3) {
+          position: absolute;
+          left: 12px;
+          top: 10px;
+          -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+          opacity: 0.9;
       }
   `}</style>
 
-</div>
+</React.Fragment>
     )
   }
 }

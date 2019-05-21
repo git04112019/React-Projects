@@ -1,23 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Scrollspy from 'react-scrollspy';
 
-export default class FancyName extends Component {
-  render() {
+
+export default function FancyName () {
+
     return (
-      <React.Fragment>
-        <Scrollspy items={ ['', 'about'] } scrolledPastClassName="name-active"  componentTag="div">
+<React.Fragment>
+    <Scrollspy items={ ['', 'about'] } scrolledPastClassName="name-active"  componentTag="div">
         <div className="animate-name">
           <div className="first-name">
             <span>H</span>
-            <span>A</span>
-            <span>N</span>
-            <span>S</span>
+            <span className="">A</span>
+            <span className="">N</span>
+            <span className="">S</span>
           </div>
           <div className="last-name">                
             <span>MCMURDY</span>
+            {/* <span className="">
+            </span> */}
+              
           </div>
         </div>
-        </Scrollspy>
+    </Scrollspy>
 
         <style jsx>{`
           .animate-name {
@@ -129,7 +133,7 @@ export default class FancyName extends Component {
         `}</style>
 </React.Fragment>
     )
-  }
+
 }
 
 

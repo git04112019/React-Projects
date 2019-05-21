@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class AboutSection extends Component {
-  render() {
-    return (
-      <div>
+
+
+const AboutSection = () => (
   <React.Fragment>   
       <section id="about" className="about-mf sect-pt4 route">
         <div className="container">
@@ -90,38 +89,38 @@ export default class AboutSection extends Component {
       </section>
 
 
-  </React.Fragment>
   <style jsx>{`
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+    .about-mf .box-shadow-full {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+    .about-mf .about-img {
+      margin-bottom: 2rem;
+    }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+    .about-mf .about-img img {
+      margin-left: 10px;
+    }
 
-.skill-mf span {
-  color: #4e4e4e;
-}
+    .skill-mf span {
+      color: #4e4e4e;
+    }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+    .skill-mf .progress {
+      background-color: #cde1f8;
+      margin: .5rem 0 1.2rem 0;
+      border-radius: 0;
+      height: .7rem;
+    }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #0078ff;
-}
+    .skill-mf .progress .progress-bar {
+      height: .7rem;
+      background-color: #0078ff;
+    }
   `}</style>
-      </div>
-    )
-  }
-}
+</React.Fragment>
+);
+
+
+export default AboutSection;

@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from '../layouts/Layout';
 import ExperianceCounter from '../components/ExperianceCounter';
 
 const About = () => (

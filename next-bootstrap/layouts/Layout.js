@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import NavigationBar from './NavigationBar';
-// import Scrollspy from 'react-scrollspy';
 
 
 import { 
@@ -21,7 +20,7 @@ const Layout = (props) => (
       />
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"></link>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet"></link>
-      {/* <link rel="stylesheet" href="static/assets/global.css"></link> */}
+      {/* <link rel="stylesheet" href="/static/assets/css/global.css"></link> */}
     </Head>
     
     <NavigationBar />
@@ -36,12 +35,7 @@ const Layout = (props) => (
           color: #4e4e4e;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1,h2,h3,h4,h5,h6 {
           color: #1e1e1e;
         }
 
@@ -58,6 +52,18 @@ const Layout = (props) => (
 
         .p-r {
           position: relative;
+        }
+
+        .ico-circle {
+          height: 100px;
+          width: 100px;
+          font-size: 2rem;
+          border-radius: 50%;
+          line-height: 1.55;
+          margin: 0 auto;
+          text-align: center;
+          box-shadow: 0 0 0 10px #0078ff;
+          display: block;
         }
 
         .color-a {
@@ -271,21 +277,6 @@ const Layout = (props) => (
           color: #0078ff;
           margin-right: 10px;
         }
-
-        /*------/ Ico Circle /------*/
-
-        .ico-circle {
-          height: 100px;
-          width: 100px;
-          font-size: 2rem;
-          border-radius: 50%;
-          line-height: 1.55;
-          margin: 0 auto;
-          text-align: center;
-          box-shadow: 0 0 0 10px #0078ff;
-          display: block;
-        }
-
 
 
         /*--/ Scrolltop s /--*/

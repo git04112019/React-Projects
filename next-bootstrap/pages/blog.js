@@ -1,19 +1,19 @@
-import Layout from '../components/Layout';
+import Layout from '../layouts/Layout';
 import { Button, Jumbotron, Row, Col, Container } from 'react-bootstrap';
 
 const Blog = () => (
   <Layout>
-<Container>
-  <Row>
-    <Col sm={8}>sm=8</Col>
-    <Col sm={4}>sm=4</Col>
-  </Row>
-  <Row>
-    <Col sm>sm=true</Col>
-    <Col sm>sm=true</Col>
-    <Col sm>sm=true</Col>
-  </Row>
-</Container>
+    <Container>
+      <Row>
+        <Col sm={8}>sm=8</Col>
+        <Col sm={4}>sm=4</Col>
+      </Row>
+      <Row>
+        <Col sm>sm=true</Col>
+        <Col sm>sm=true</Col>
+        <Col sm>sm=true</Col>
+      </Row>
+    </Container>
     <Jumbotron>
       <h1>Our Simple Blog!</h1>
 
