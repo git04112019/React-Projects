@@ -1,7 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { 
+  Button,
+  Collapse
+ } from 'react-bootstrap';
+
 
 export default class ServicesSection extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      open: false,
+    };
+  }
+
   render() {
+    const { open } = this.state;
+
     return (
       <div>
   <React.Fragment> 
@@ -22,17 +37,32 @@ export default class ServicesSection extends Component {
           </div>
           <div className="row">
             <div className="col-md-4">
-              <div className="service-box">
-                <div className="service-ico">
-                  <span className="ico-circle"><i className="ion-code-working" /></span>
+              {/* <ExpItem 
+              title="Web Development"
+              icon="ion-code-working"
+              description=""
+              /> */}
+          <div className="service-box">
+                  <div className="service-ico">
+                    <span className="ico-circle"><i className="ion-code-working" /></span>
+                  </div>
+                  <div className="service-content">
+                    <h2 className="s-title">Web Development</h2>
+                    <Button
+                      onClick={() => this.setState({ open: !open })}
+                      aria-controls="collapse-WebDesign"
+                      aria-expanded={open}
+                      className="s-description text-center"
+                    >
+                      Learn more
+                    </Button>
+                    <Collapse in={this.state.open}>
+                      <p id="collapse-WebDesign" className="s-description text-center">
+                      Coding the web since 2013. It's one of the most rewarding things to do because after the problems are solved, you've made something and its live to the word.
+                      </p>
+                    </Collapse>
+                  </div>
                 </div>
-                <div className="service-content">
-                  <h2 className="s-title">Web Development</h2>
-                  <p className="s-description text-center">
-                    Coding the web since 2013. It's one of the most rewarding things to do because after the problems are solved, you've made something and its live to the word.
-                  </p>
-                </div>
-              </div>
             </div>
             <div className="col-md-4">
               <div className="service-box">
