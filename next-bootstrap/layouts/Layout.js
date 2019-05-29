@@ -7,7 +7,7 @@ const Layout = (props) => (
   <div>
 <React.Fragment>
     <Head>
-      <title>BMD React Next</title>
+      <title>Hans McMurdy</title>
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

@@ -10,3 +10,7 @@ This project is focused on converting a jquery template to a react page site usi
 
 [react-visibility-sensor](https://github.com/joshwnj/react-visibility-sensor) Like waypoints
 [article about use](https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start).
+
+
+# SSL on Heroku
+[Heroku Docs for paid dyno](https://devcenter.heroku.com/articles/ssl)

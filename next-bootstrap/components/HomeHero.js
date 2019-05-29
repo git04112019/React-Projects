@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Typist from 'react-typist';
 
-
 export default function HomeHero () {
 
   // Define Theme colors
@@ -11,6 +10,7 @@ export default function HomeHero () {
     return (
       <React.Fragment>
       <div id="home" className="intro route bg-image">
+
         <div className="overlay-itro"> </div>
         <div className="intro-content display-table">
           <div className="table-cell">

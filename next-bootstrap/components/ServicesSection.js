@@ -42,7 +42,7 @@ export default class ServicesSection extends Component {
               icon="ion-code-working"
               description=""
               /> */}
-          <div className="service-box">
+                <div className="service-box">
                   <div className="service-ico">
                     <span className="ico-circle"><i className="ion-code-working" /></span>
                   </div>
