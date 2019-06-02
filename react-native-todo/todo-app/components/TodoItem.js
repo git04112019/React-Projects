@@ -2,11 +2,27 @@ import React from 'react';
 import { StyleSheet, Text, Button, TouchableOpacity } from 'react-native';
 
 export default class TodoItem extends React.Component {
+  constructor (props){
+    super(props);
+  }
+  
 
   render () {
-
+    const todoItem = this.props.todoItem;
     return (
-      <TouchableOpacity>
+      <TouchableOpacity 
+        style={styles.todoItem}
+        onPress={() => this.props.toggleDone()}
+      >
+        {/* If the itemItem is done, */}
+        <Text style={(todoItem.done) ? { color: '#AAAAAA' } : { color: '#313131' }}>
+          { todoItem.title }
+        </Text>
+        <Button
+          title="Remove"
+          color={(todoItem.done) ? 'rgba(200, 0, 0, 0.5)' : 'rgba(255, 0, 0, 1)' }
+          onPress={() => this.props.removeTodo()}
+        />
       </TouchableOpacity>
     )
   }

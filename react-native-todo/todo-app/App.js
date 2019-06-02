@@ -16,16 +16,82 @@ export default class App extends React.Component {
     }
   }
 
+  addNewTodo () {
+    console.log(this.state.todoInput)
+
+    //// Check the original value of the todos arrary
+    console.log("OG",this.state.todos);
+
+    // we want to add to the "todos" array
+    // we do this with "unshift"
+    let todos = this.state.todos;
     
+    todos.unshift({
+      id: todos.length + 1,
+      title: this.state.todoInput,
+      done: false
+    });
+
+    this.setState({
+      todos,
+      todoInput: ''
+    });
+
+    //// check the updated values of the array
+    console.log("updated",this.state.todos);
+  }
+
+  toggleDone (item) {
+    let todos = this.state.todos;
+
+    todos = todos.map((todo) => {
+      if (todo.id == item.id) {
+        todo.done = !todo.done;
+      }
+
+      return todo;
+    })
+
+    this.setState({todos});
+  }
+
+  removeTodo (item) {
+    let todos = this.state.todos;
+
+    todos = todos.filter((todo) => todo.id !== item.id);
+
+    this.setState({todos});
+  }
+
 
   render() {
     const statusbar = (Platform.OS == 'ios') ? <View style={styles.statusbar}></View> : <View></View>;
+
     return (
       <View style={styles.container}>
         {statusbar}
         <Header title="Pickle Rick List"/>
         <InputBar 
+          // we use ()=> this.addNewTodo()inside the attributes
+          // so we can manipulate data instead of refs
+          addNewTodo={() => this.addNewTodo()}
           textChange={todoInput => this.setState({ todoInput })}
+          todoInput={this.state.todoInput}
+        />
+
+        <FlatList
+          data={this.state.todos}
+          extraData={this.state}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({item, index}) => {
+            return (
+              <TodoItem 
+                todoItem={item} 
+                toggleDone={ ()=> this.toggleDone(item) }
+                removeTodo={() => this.removeTodo(item)} 
+              />
+            )
+          }}
         />
         <Text> {this.state.todoInput} </Text>
       </View>
