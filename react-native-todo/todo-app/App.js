@@ -1,7 +1,8 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-
-import Header  from './components/Header';
+import { Platform, StyleSheet, Text, View, FlatList } from 'react-native';
+import Header from './components/Header';
+import InputBar from './components/InputBar';
+import TodoItem from './components/TodoItem';
 
 export default class App extends React.Component {
   constructor(){
@@ -22,9 +23,11 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         {statusbar}
-        <Header title="Pickle Rick boys !"/>
-        {/* <View style={styles.statusbar}></View> */}
-        {/* <Text>My first fucking app boys!</Text> */}
+        <Header title="Pickle Rick List"/>
+        <InputBar 
+          textChange={todoInput => this.setState({ todoInput })}
+        />
+        <Text> {this.state.todoInput} </Text>
       </View>
     );
   }
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
   statusbar: {
-    backgroundColor: '#FFCE00',
+    // backgroundColor: '#FFCE00',
     height: 20
   }, 
 });
