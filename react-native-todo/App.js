@@ -10,8 +10,9 @@ export default class App extends React.Component {
     this.state = {
       todoInput: '',
       todos: [
-        {id: 0, title: 'Take out trash', done: false},
-        {id: 1, title: 'Dishes', done: false}
+        {id: 0, title: 'Insult Jerry', done: false},
+        {id: 1, title: 'Build something', done: false},
+        {id: 1, title: 'Morty Mind Blowers', done: false}
       ]
     }
   }
