@@ -12,55 +12,38 @@ export default class App extends React.Component {
       todos: [
         {id: 0, title: 'Insult Jerry', done: false},
         {id: 1, title: 'Build something', done: false},
-        {id: 1, title: 'Morty Mind Blowers', done: false}
+        {id: 2, title: 'Morty Mind Blowers', done: false}
       ]
     }
   }
 
-  addNewTodo () {
-    console.log(this.state.todoInput)
-
-    //// Check the original value of the todos arrary
-    console.log("OG",this.state.todos);
-
-    // we want to add to the "todos" array
-    // we do this with "unshift"
-    let todos = this.state.todos;
-    
-    todos.unshift({
-      id: todos.length + 1,
-      title: this.state.todoInput,
-      done: false
-    });
-
+  addNewTodo = () => {
     this.setState({
-      todos,
-      todoInput: ''
+      todos: [
+        {
+          id: this.state.todos.length + 1,
+          title: this.state.todoInput,
+          done: false
+        },
+        ...this.state.todos
+      ]
     });
-
-    //// check the updated values of the array
-    console.log("updated",this.state.todos);
-  }
+  };
 
   toggleDone (item) {
     let todos = this.state.todos;
-
     todos = todos.map((todo) => {
       if (todo.id == item.id) {
         todo.done = !todo.done;
       }
-
       return todo;
     })
-
     this.setState({todos});
   }
 
   removeTodo (item) {
     let todos = this.state.todos;
-
     todos = todos.filter((todo) => todo.id !== item.id);
-
     this.setState({todos});
   }
 
