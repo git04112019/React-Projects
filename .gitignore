@@ -1,0 +1,18 @@
+/MERN
+/MERN-portfolio
+/*.zip
+/DashboardFrameworks
+/react-pdf-demo
+/State_Management
+/wp
+/priceStock
+/react-pdf-demo
+
+# Hide RN app in progress 
+/NativeApps/ARapp
+/NativeApps/appleWatchAppTemplate
+/NativeApps/AntiFraud
+
+
+# The nagging wife app
+/NativeApps/Nagger

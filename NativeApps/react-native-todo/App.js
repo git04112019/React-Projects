@@ -17,7 +17,12 @@ export default class App extends React.Component {
     }
   }
 
-  addNewTodo = () => {
+  addNewTodo () {
+    console.log(this.state.todoInput)
+
+    //// Check the original value of the todos arrary
+    console.log("OG",this.state.todos);
+
     this.setState({
       todos: [
         {
@@ -28,22 +33,30 @@ export default class App extends React.Component {
         ...this.state.todos
       ]
     });
-  };
+
+    //// check the updated values of the array
+    console.log("updated",this.state.todos);
+  }
 
   toggleDone (item) {
     let todos = this.state.todos;
+
     todos = todos.map((todo) => {
       if (todo.id == item.id) {
         todo.done = !todo.done;
       }
+
       return todo;
     })
+
     this.setState({todos});
   }
 
   removeTodo (item) {
     let todos = this.state.todos;
+
     todos = todos.filter((todo) => todo.id !== item.id);
+
     this.setState({todos});
   }
 
