@@ -52,6 +52,7 @@ export default class NavigationBar extends Component {
               <Scrollspy items={ ['', "blog"] } scrolledPastClassName="active"  componentTag='li' className=" nav-item">
                 <Nav.Link className="nav-link js-scroll" href="#blog">Blog</Nav.Link>
               </Scrollspy>
+                <Nav.Link className="nav-link js-scroll" href="/pdf">pdf</Nav.Link>
           </Nav>
       </Navbar.Collapse>
     </Navbar> 

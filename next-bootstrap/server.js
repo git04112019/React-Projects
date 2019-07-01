@@ -5,6 +5,8 @@ const url = require('url');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 
+
+
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 
@@ -42,23 +44,35 @@ if (!dev && cluster.isMaster) {
           res.redirect("https://" + req.headers.host + req.url);
         });
       }
-      
+
+      const bodyParser = require('body-parser');
+      const pdf = require('html-pdf');
+      const cors = require('cors');
+      server.use(cors());
+      server.use(bodyParser.urlencoded({extended: true}));
+      server.use(bodyParser.json());
+      const pdfTemplate = require('./documents');
+      // get the pdf data from client
+      sever.get('/fetch-pdf', (req, res) => {
+        res.sendFile(`${__dirname}/result.pdf`)
+      })
+
+      sever.post('/create-pdf', (req, res) => {
+        pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+            if(err) {
+                res.send(Promise.reject());
+            }
+    
+            res.send(Promise.resolve());
+        });
+      });
+
       // Static files
       // https://github.com/zeit/next.js/tree/4.2.3#user-content-static-file-serving-eg-images
       server.use('/static', express.static(path.join(__dirname, 'static'), {
         maxAge: dev ? '0' : '365d'
       }));
     
-      // Example server-side routing
-      server.get('/a', (req, res) => {
-        return nextApp.render(req, res, '/b', req.query)
-      })
-
-      // Example server-side routing
-      server.get('/b', (req, res) => {
-        return nextApp.render(req, res, '/a', req.query)
-      })
-
       // Default catch-all renders Next app
       server.get('*', (req, res) => {
         // res.set({
